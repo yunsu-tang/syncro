@@ -23,3 +23,4 @@ Thumbs.db
 # Ignore IDE/editor config files
 .vscode/
 .idea/
+.ipynb_checkpoints/
