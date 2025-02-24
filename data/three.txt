@@ -1,0 +1,37 @@
+txt = """Morning Briefing - 17th February 2025
+ 
+Priority Roundup
+•       No new relevant activity
+ 
+Political Agenda
+•       The House of Commons is in recess until 24th February. 
+•       The House of Lords is in recess until 24th February. 
+•       The Scottish Parliament is in recess until 18th February. 
+•       The Welsh Parliament – Committees.
+•       The Northern Ireland Assembly – Plenary.
+ 
+Political Roundup
+•       The Liaison Committee announced it is ‘encouraging select committees to write to their respective Secretary of State to request additional access to Spending Review submission documentation’, as according to Chair Meg Hillier MP, “this is the best opportunity in many years for committees to scrutinise, in depth, a multi-year Spending Review at its formative stages”.
+https://committees.parliament.uk/committee/103/liaison-committee-commons/news/205294/best-opportunity-in-many-years-to-scrutinise-multiyear-spending-review-prompts-coordinated-action-by-select-committees/
+
+•       The list of questions due to be asked at Home Office OPQs on 24 February have been released, with David Pinto-Duschinsky MP due to ask about helping protect consumers against fraud and Greg Stafford MP due to ask about tackling phone theft.
+ 
+Political Publications
+•       The Lords International Agreements Committee published the Government response to its report on Data and Digital Trade. The response highlights the Government's intention to join the E-Commerce Joint Initiative Agreement at the WTO, and stresses that 'the Government is also committed to drive focus and cooperation on interoperability for emerging technologies, including AI.' It also highlights that digital trade will form a core part of the Government's Trade Strategy, and states 'we endeavour to address existing barriers around the world, and prevent new barriers from emerging, thus reducing, removing or avoiding unfair restrictions or conditions on British businesses as they trade overseas.'
+ 
+New Consultations
+•       No new relevant activity
+ 
+Written Parliamentary Questions
+•       Fraud: Communications - Although the Department of Business and Trade does not directly regulate these sectors, Companies House and the Insolvency Service supply data on UK registered companies to assist law enforcement targeting online fraud and other economic crimes. Furthermore, through the Consumer Protection Partnership, we raise awareness about how to spot, avoid and report scams. Across Government, the Home Office works with Ofcom to prevent phone number ‘spoofing’, which is the practice of scammers impersonating UK phone numbers to trick people into thinking they are speaking to legitimate businesses. (Asked by David Chadwick MP, Liberal Democrat, Brecon, Radnor and Cwm Tawe)
+•       Mobile Phones - The Government wants all areas of the UK, including East Anglia and South West Norfolk, to benefit from reliable and good quality mobile coverage. Through the Shared Rural Network, 4G geographic coverage from at least one mobile operator has now reached over 95% of the UK landmass. Our ambition is for all populated areas, including communities in rural areas, to have higher-quality standalone 5G by 2030. We are committed to ensuring we have the right policy and regulatory framework to support investment and competition. This includes working with Ofcom to ensure that their coverage reporting is more accurate. (Asked by Terry Jermy MP, Labour, South West Norfolk, 1, 2)
+•       5G: Infrastructure - The department has not carried out an assessment of the adequacy of the availability of land or property for 5G infrastructure, and this is not an issue previously raised by industry. The Electronic Communications Code provides the regulatory framework by which telecommunications operators gain access to land and property to deploy infrastructure. This aims to balance the rights of site providers and operators to facilitate infrastructure deployment on public and private land, as well as encouraging the sharing of infrastructure. (Asked by Alex Mayer MP, Labour, Dunstable and Leighton Buzzard)
+•       Broadband: Advertising - The government sees the use of consistent terminology between providers as a means to support take-up of gigabit capable broadband services and we continue to engage with Ofcom on this topic. The government is planning to consult on the draft updated Statement of Strategic Priorities (SSP) for telecommunications, the management of radio spectrum, and postal services in the coming weeks. As part of the consultation process, we would welcome views on content of the SSP from industry stakeholders. (Asked by Gregory Stafford MP, Conservative, Farnham and Bordon)
+•       Broadband - The government continues to work with the broadband industry and regulatory bodies to support take-up of gigabit-capable broadband. The government welcomes the introduction by Ofcom of new guidance to ensure consumers are told in clear terms, at point of sale, about the technology that underpins their broadband service. We also welcome the launch of One Touch Switch (OTS) by industry. Consumers now only have to contact their new provider when they wish to switch provider. OTS should support take-up of gigabit broadband as it makes it more straightforward for consumers to upgrade and move providers. (Asked by Gregory Stafford MP, Conservative, Farnham and Bordon)
+•       Broadband: Leicestershire - According to the independent website, Thinkbroadband.com, over 86% of UK premises can now access gigabit-capable broadband. In Leicestershire this figure is currently at 83%, and for the Mid Leicestershire constituency it is over 89%. Our objective is for nationwide gigabit coverage across the UK by 2030, with at least 99% of premises having access to a gigabit-capable broadband connection. The rate of delivery in each area will depend on broadband suppliers’ commercial rollout, supplemented by the delivery of Project Gigabit to address gaps in coverage. Over one million premises in the UK are currently included in Project Gigabit contracts, through which they should gain access to a gigabit-capable broadband connection in the next five years. This includes approximately 15,600 premises in the non-metropolitan county of Leicestershire and around 600 premises in the Mid Leicestershire constituency. (Asked by Mr Peter Bedford MP, Conservative, Mid Leicestershire)
+•       Railways: Telecommunications - Department for Transport officials are working closely with the train operating companies and the Department for Science, Innovation and Technology to develop proposals to improve passenger mobile connectivity. (Asked by Mark Pritchard MP, Conservative, The Wrekin) 
+Online
+•       Jenny Rathbone MS posted that mobile services were being upgraded in Cardiff and could be causing interference with 'free to view TV'. She shared how Restore TV offers free help and advice if people have issues. 
+ 
+Influencers
+"""

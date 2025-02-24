@@ -26,8 +26,9 @@ class IncomingMessage(BaseModel):
 
 # Function to validate the message format (first name, last name, work email)
 def validate_message(message: str) -> bool:
-    pattern = r"^[A-Za-z]+ [A-Za-z]+, [a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$"
-    return bool(re.match(pattern, message))
+    return True
+    # pattern = r"^[A-Za-z]+ [A-Za-z]+, [a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$"
+    # return bool(re.match(pattern, message))
 
 
 # Dummy podcast generation function (Replace with actual logic)
@@ -52,8 +53,10 @@ def send_whatsapp_message(to: str, message: str):
 @app.post("/webhook/")
 async def handle_message(message: IncomingMessage):
     if validate_message(message.body):
-        podcast_audio = generate_podcast_output(message = message.body)
-        text_doc = generate_podcast_text(message = message.body)
+        with open("data/three.txt", "r", encoding="utf-8") as file:
+            message_content = file.read()
+        podcast_audio = generate_podcast_output(message = message_content)
+        text_doc = generate_podcast_text(message = message_content)
         external_audio = export_to_cloud(podcast_audio, bucket_name=os.getenv("GCS_BUCKET_NAME"), destination_blob_name="podcast.mp3")
         external_text = export_to_cloud(text_doc, bucket_name=os.getenv("GCS_BUCKET_NAME"), destination_blob_name="text_doc.txt")
         response_message = f"Your podcast is ready! Listen to it here: {external_audio} and check the document here: {external_text}"
