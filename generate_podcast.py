@@ -1,7 +1,7 @@
 # generate_podcast.py
 from methods.prompt import prompt_user
 from methods.gnews import gnews_search
-from methods.podcastfy import generate_podcast_audio_file_path
+from methods.podcasty import generate_podcast_audio_file_path
 def generate_podcast(message: str):
     """
     This function will generate the podcast based on the provided name and email.
@@ -10,9 +10,10 @@ def generate_podcast(message: str):
     # print(f"Generating podcast for {name} with email {email}...")
     # Add the logic for podcast generation here
     chat_completion = prompt_user()
+    print(chat_completion.choices[0].to_dict()['message']['content'])
     # query = chat_completion.choices[0].to_dict()['message']['content'].split("\n\n</query_construction_process>\n\n")[1]
-    query = chat_completion.choices[0].to_dict()['message']['content'].split("\n\nFinal Boolean search query string:\n\n")[1]
-    
+    # query = chat_completion.choices[0].to_dict()['message']['content'].split("\n\nFinal Boolean search query string:\n\n")[1]
+    query = "AVIVA"
     articles = gnews_search(query)  
 
     urls = []
@@ -26,4 +27,4 @@ def generate_podcast(message: str):
     
     podcast_path = generate_podcast_audio_file_path(urls)
     # Return the podcast and text document file names as placeholders
-    return podcast_path[0], podcast_path[1]
+    return podcast_path

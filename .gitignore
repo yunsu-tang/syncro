@@ -24,3 +24,8 @@ Thumbs.db
 .vscode/
 .idea/
 .ipynb_checkpoints/
+
+#
+data/audio
+data/summaries
+data/transcripts

@@ -33,7 +33,7 @@ edge-tts==6.1.19
 elevenlabs==1.51.0
 execnet==2.1.1
 executing==2.2.0
-fastapi==0.115.8
+fastapi[all]
 fastjsonschema==2.21.1
 ffmpeg==1.4
 filelock==3.17.0
@@ -165,8 +165,6 @@ python-Levenshtein==0.26.1
 pytweening==1.2.0
 pytz==2025.1
 pywhatkit==5.4
-pywin32==308
-pywinpty==2.0.15
 PyYAML==6.0.2
 pyzmq==26.2.1
 RapidFuzz==3.12.1

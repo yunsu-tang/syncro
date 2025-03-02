@@ -1,16 +1,19 @@
 # Use an official Python runtime as a parent image
 FROM python:3.11-slim
 
+# Install system dependencies
+RUN apt-get update && apt-get install -y gcc && rm -rf /var/lib/apt/lists/*
+
 # Set the working directory
 WORKDIR /app
 
 # Copy the current directory contents into the container
 COPY . /app
 
-# Install FastAPI and Uvicorn
-RUN pip install -r requirements.txt
+# Install dependencies
+RUN pip install --no-cache-dir -r requirements.txt
 
-# Expose port
+# Expose FastAPI port
 EXPOSE 8000
 
 # Run the FastAPI app using Uvicorn
