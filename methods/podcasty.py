@@ -10,7 +10,7 @@ custom_config = {
         "Headline summary","Main Content Summary","Things to look out for in the future"
     ],  # Mimics a structured debate format
     "podcast_name": "Morning Alert",
-    "user_instructions": "Mention at the start that the podcast is for James",
+    "user_instructions": "Mention at the start that the podcast is for Yunsu",
     # "engagement_techniques": [
     #     "socratic questioning",
     #     "historical references",

@@ -10,10 +10,7 @@ def generate_podcast(message: str):
     # print(f"Generating podcast for {name} with email {email}...")
     # Add the logic for podcast generation here
     chat_completion = prompt_user()
-    print(chat_completion.choices[0].to_dict()['message']['content'])
-    # query = chat_completion.choices[0].to_dict()['message']['content'].split("\n\n</query_construction_process>\n\n")[1]
-    # query = chat_completion.choices[0].to_dict()['message']['content'].split("\n\nFinal Boolean search query string:\n\n")[1]
-    query = "AVIVA"
+    query = chat_completion.choices[0].to_dict()['message']['content'].split("\n\nFinal Boolean search query string:\n\n")[1]
     articles = gnews_search(query)  
 
     urls = []

@@ -4,7 +4,7 @@ import re
 import requests
 from generate_podcast import generate_podcast
 from methods.txtsum import generate_podcast_text
-from methods.cloudfuncs import export_to_cloud
+from methods.upload_drive import upload_to_drive
 from dotenv import load_dotenv
 import os
 
@@ -26,9 +26,8 @@ class IncomingMessage(BaseModel):
 
 # Function to validate the message format (first name, last name, work email)
 def validate_message(message: str) -> bool:
-    return True
-    # pattern = r"^[A-Za-z]+ [A-Za-z]+, [a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$"
-    # return bool(re.match(pattern, message))
+    pattern = r"^[A-Za-z]+ [A-Za-z]+, [a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$"
+    return bool(re.match(pattern, message))
 
 
 # Dummy podcast generation function (Replace with actual logic)
@@ -53,19 +52,12 @@ def send_whatsapp_message(to: str, message: str):
 @app.post("/webhook/")
 async def handle_message(message: IncomingMessage):
     if validate_message(message.body):
-        with open("data/three.txt", "r", encoding="utf-8") as file:
-            message_content = file.read()
-        print(message.body)
-        podcast_audio = generate_podcast_output(message = message_content)
-        text_doc = generate_podcast_text(message = message_content)
-        # external_audio = export_to_cloud(podcast_audio, bucket_name=os.getenv("GCS_BUCKET_NAME"), destination_blob_name="podcast.mp3")
-        # external_text = export_to_cloud(text_doc, bucket_name=os.getenv("GCS_BUCKET_NAME"), destination_blob_name="text_doc.txt")
-        response_message = f"Your podcast is ready! Listen to it here: {podcast_audio} and check the document here: {text_doc}"
-        # send_whatsapp_message(message.from_number, response_message)
+        podcast_audio = generate_podcast_output(message = message.body)
+        text_doc = generate_podcast_text(message = message.body)
+        external_audio = upload_to_drive(podcast_audio, "podcast.mp3")
+        external_text = upload_to_drive(text_doc, "text_doc.txt")
+        response_message = f"Your podcast is ready! Listen to it here: {external_audio} and check the document here: {external_text}"
+        send_whatsapp_message(message.from_number, response_message)
         return {"status": "success", "message": response_message}
     else:
         raise HTTPException(status_code=400, detail="Invalid message format")
-
-
-# For local testing (you can use uvicorn to run it)
-# uvicorn app:app --reload
